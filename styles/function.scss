@@ -1,0 +1,10 @@
+@function spread_func($index) {
+  @if($index % 2 == 0) {
+    @return calc(50% - 44px);
+  }
+  @return 50%;
+}
+
+@function spread_top($index) {
+  @return ($index * 44)px;
+}

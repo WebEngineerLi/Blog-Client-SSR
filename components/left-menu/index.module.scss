@@ -1,0 +1,80 @@
+@import '@/styles/variables.scss';
+
+.is-collapsed {
+  width: 0px!important;
+  transition: width .3s;
+  overflow: hidden;
+}
+
+.is-expand {
+  width: 400px!important;
+  transition: width .3s;
+  overflow: hidden;
+}
+
+.wrapper {
+  flex-shrink: 0;
+  overflow: hidden;
+  width: 400px;
+  box-shadow: 1px 0 10px 1px #ccc;
+  height: 100vh;
+  background: #ffffff;
+  font-family: 'Songti SC','Noto Serif SC',STZhongsong,STKaiti,KaiTi,Roboto,serif;
+  position: relative;
+
+
+
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .avatar-wrapper {
+    margin-top: 40px;
+    padding: 5px;
+    :global {
+      .ant-avatar {
+        border-radius: 0;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
+        transition: .4s;
+        padding: 4px;
+        border-radius: 50%;
+      }
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  .name {
+    text-align: center;
+    color: $primary-color;
+  }
+
+  .describe {
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+  }
+
+  .icon-wrapper {
+    width: 160px;
+    margin: 30px auto 0;
+
+    svg {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  .placement {
+    width: 12px;
+    margin: 20px auto;
+  }
+
+}

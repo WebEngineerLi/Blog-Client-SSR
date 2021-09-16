@@ -1,0 +1,19 @@
+@import './function.scss';
+
+//@mixin spread_mixin($index) {
+//  0% {
+//    transform: rotateZ(20deg);
+//  }
+//  100% {
+//    transform: rotateZ(20deg);
+//  }
+//}
+
+@mixin spread_mixin($index) {
+  0% {
+    left: calc(50% - 22px);
+  }
+  100% {
+    left: spread_func($index);
+  }
+}

@@ -1,0 +1,29 @@
+.section {
+  margin: 0;
+  color: #3f1c1c;
+  .title {
+    border-left: 6px solid #3B898A;
+    padding-left: 16px;
+    height: 20px;
+    line-height: 20px;
+  }
+  :global {
+    .ant-descriptions {
+      margin: 16px;
+      background-color: #F5F5F5;
+      padding: 12px 12px 0 12px;
+      .ant-descriptions-item-content {
+        &:before {
+          content: "";
+          display: inline-block;
+          height: 9px;
+          width: 9px;
+          background: #3f1c1c;
+          margin-bottom: 1px;
+          margin-right: 8px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

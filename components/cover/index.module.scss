@@ -1,0 +1,105 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin.scss';
+@import '@/styles/function.scss';
+
+$spread_height: 44px;
+
+:global {
+  @keyframes spread_0 {
+    @include spread_mixin(0);
+  }
+
+  @keyframes spread_1 {
+    @include spread_mixin(1);
+  }
+
+  @keyframes spread_2 {
+    @include spread_mixin(2);
+  }
+
+  @keyframes spread_3 {
+    @include spread_mixin(3);
+  }
+  
+  @keyframes liner-height {
+    from {
+      height: 0;
+    }
+    to {
+      height: calc(100% - 10px);
+    }
+  }
+}
+
+.container {
+  height: 100vh;
+  background: #fff url("https://cdn.mingyangli.com/xiaoqing_filter.jpg") no-repeat fixed center / cover;
+}
+
+.wrapper {
+  font-family: 'Songti SC',"Helvetica","Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .spread_item_0 {
+    top: calc(40%);
+    left: calc(50% - 22px);
+    box-shadow: -2px 2px 1px $primary-color;
+    animation: spread_0 0.3s linear 1 0.3s forwards;
+  }
+
+  .spread_item_1 {
+    top: calc(40% + 44px);
+    left: calc(50% - 22px);
+    box-shadow: 2px 2px 1px $primary-color;
+    animation: spread_1 0.3s linear 1 0.3s forwards;
+  }
+
+  .spread_item_2 {
+    top: calc(40% + 88px);
+    left: calc(50% - 22px);
+    box-shadow: -2px 2px 1px $primary-color;
+    animation: spread_2 0.3s linear 1 0.3s forwards;
+  }
+
+  .spread_item_3 {
+    top: calc(40% + 132px);
+    left: calc(50% - 22px);
+    box-shadow: 2px 2px 1px $primary-color;
+    animation: spread_3 0.3s linear 1 0.3s forwards;
+  }
+
+  .item {
+    position: absolute;
+    display: inline-block;
+    font-size: $spread_height;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    background-color: rgba(0, 0, 0, .2);
+    transform-origin: top center;
+  }
+
+  .liner {
+    height: calc(100% - 20px);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    background-color: rgba(#fff, 50%);
+    animation: liner-height 1s ease-in-out 1 0s;
+  }
+
+  .icon-arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -30px;
+    display: inline-block;
+    svg {
+      height: 60px;
+      width: 60px;
+    }
+  }
+}

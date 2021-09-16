@@ -1,0 +1,77 @@
+@import "./variables.scss";
+@import url("~hover.css/css/hover-min.css");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  cursor: url("https://cdn.mingyangli.com/Mouse_cursor.png"), auto;
+}
+
+// @font-face {
+//   font-family: Chunkfive; src: url('Chunkfive.otf');
+// }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.ml10 {
+  margin-top: 10px;
+}
+
+.ml20 {
+  margin-top: 20px;
+}
+
+.mr10 {
+  margin-top: 10px;
+}
+
+.mr20 {
+  margin-top: 20px;
+}
+
+.mb10 {
+  margin-top: 10px;
+}
+
+.mb20 {
+  margin-top: 20px;
+}
+
+.animate__animated.animate__swing {
+  --animate-duration: 1s;
+  --animate-iteration-count: 10;
+}

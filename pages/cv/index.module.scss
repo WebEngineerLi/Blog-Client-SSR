@@ -1,0 +1,16 @@
+.container {
+  height: 100vh;
+  overflow: auto;
+}
+.wrap {
+  box-shadow: 1px 1px 8px rgba(0,0,0,.16);
+  margin: 0 15% 0;
+  min-width: 750px;
+  padding: 16px 0;
+  flex: 1;
+  :global {
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+}

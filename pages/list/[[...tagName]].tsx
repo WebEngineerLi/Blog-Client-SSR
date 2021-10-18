@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useRouter } from 'next/router'
 import BlogList from '@/components/blog-list';
 import { getBlogList } from '@/utils/api';
 import styles from './index.module.scss';
@@ -20,9 +21,16 @@ const List: FC<ListProps> = ({
   )
 }
 
-export async function getServerSideProps() {
-  // 可以按照 tagId 进行分类筛选
-  const blogList = await getBlogList();
+export async function getServerSideProps(context: any) {
+  const { tagName } = context.params;
+  // 可以按照 tagName 进行分类筛选
+  const params = {
+    blogTag: ''
+  };
+  if (tagName) {
+    [params.blogTag] = tagName;
+  }
+  const blogList = await getBlogList(params);
   return {
     props: {
       blogList,

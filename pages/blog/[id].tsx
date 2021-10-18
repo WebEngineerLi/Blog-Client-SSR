@@ -64,8 +64,8 @@ const BlogDetail: FC<blogDetailProps> = ({
         </div>
         <div
           className={styles.content}
-          dangerouslySetInnerHTML={{ __html: marked(blogContent) }}
-        ></div>
+          dangerouslySetInnerHTML={{__html: marked(blogContent)}}
+        />
       </Card>
     </div>
   )

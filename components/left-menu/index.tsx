@@ -43,7 +43,7 @@ const LeftMenu: FC<LeftMenuProps> = ({
       {isShowClose && <span
         onClick={handleCollapse}
       >
-        <Iconfont type="icon-close" className={cls(styles.close, 'hvr-pulse')}/>
+        <Iconfont type="icon-close" className={cls(styles.close, 'hvr-pulse', 'pointer')}/>
       </span>}
       <div
         onClick={() => router.push('/cv')}
@@ -56,7 +56,7 @@ const LeftMenu: FC<LeftMenuProps> = ({
       <div className={cls(styles['icon-wrapper'], 'flex', 'justify-between')}>
         {icons.map(({ icon , link}) => (
           <span key={icon} onClick={() => router.push(link) }>
-             <Iconfont type={icon} className='hvr-pulse' />
+             <Iconfont type={icon} className='hvr-pulse pointer' />
           </span>
         ))}
       </div>

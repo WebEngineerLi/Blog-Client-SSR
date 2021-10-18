@@ -8,6 +8,7 @@ interface requestParams {
 }
 
 const baseUrl = 'https://www.mingyangli.com'
+// const baseUrl = 'http://127.0.0.1:7001'
 
 function formatParams(method: string, url: string, params: any) {
   let finalUrl = url;

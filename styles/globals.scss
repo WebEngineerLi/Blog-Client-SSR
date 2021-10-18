@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  cursor: url("https://cdn.mingyangli.com/Mouse_cursor.png"), auto;
+  //cursor: url("https://cdn.mingyangli.com/Mouse_cursor.png"), auto;
 }
 
 // @font-face {
@@ -74,4 +74,9 @@ a {
 .animate__animated.animate__swing {
   --animate-duration: 1s;
   --animate-iteration-count: 10;
+}
+
+.pointer {
+  cursor: pointer;
+  user-select: none;
 }

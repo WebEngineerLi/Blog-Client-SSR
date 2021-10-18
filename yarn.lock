@@ -86,7 +86,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.9.2":
+"@babel/runtime@^7.2.0", "@babel/runtime@^7.9.2":
   version "7.15.4"
   resolved "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.15.4.tgz?cache=0&sync_timestamp=1630618914695&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
   integrity sha1-/RfRa/34eObdAtGXU6OfqKjZyEo=
@@ -2943,7 +2943,7 @@ progress@^2.0.0:
   resolved "https://registry.npm.taobao.org/progress/download/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha1-foz42PW48jnBvGi+tOt4Vn1XLvg=
 
-prop-types@15.7.2, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.5.7, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -3444,6 +3444,15 @@ react-router@5.2.0:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+
+react-sortable-hoc@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/react-sortable-hoc/download/react-sortable-hoc-2.0.0.tgz?cache=0&sync_timestamp=1616123350417&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-sortable-hoc%2Fdownload%2Freact-sortable-hoc-2.0.0.tgz#f6780d8aa4b922a21f3e754af542f032677078b7"
+  integrity sha1-9ngNiqS5IqIfPnVK9ULwMmdweLc=
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    invariant "^2.2.4"
+    prop-types "^15.5.7"
 
 react@17.0.2:
   version "17.0.2"

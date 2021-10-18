@@ -16,7 +16,7 @@ function BlogList() {
           return (
             <Card key={item.blogId} className={styles.item}>
               <Link href={`/blog/${item.blogId}`} passHref>
-                <h1 className={cls(styles.title, 'hvr-buzz')}>{item.blogTitle}</h1>
+                <h1 className={cls(styles.title, 'pointer')}>{item.blogTitle}</h1>
               </Link>
               <div className={cls(styles.datetime, 'flex', 'align-center')}>
                 <Iconfont type="icon-rili" />

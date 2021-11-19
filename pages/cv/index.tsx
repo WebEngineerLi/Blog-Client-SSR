@@ -3,6 +3,7 @@ import styles from './index.module.scss'
 import Section from '@/components/section';
 import { Descriptions, Spin } from 'antd';
 import { getCvList } from '@/utils/api';
+import Title from "@/components/Title";
 interface cvProps {
   cvList: {
     github: string[],
@@ -25,9 +26,10 @@ const CV: FC<cvProps> = ({
   }
 
   const { personalInformation, technologyStack, personalSkills, github } = cvList;
-  
+
   return (
     <Spin spinning={false}>
+      <Title title="简介" />
       <div className={styles.container}>
         <div className={styles.wrap}>
           <Section title="个人信息">

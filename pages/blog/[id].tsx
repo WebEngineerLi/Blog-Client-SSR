@@ -8,6 +8,7 @@ import marked from 'marked';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/atom-one-dark-reasonable.css';
 import styles from './index.module.scss';
+import Title from "@/components/Title";
 
 marked.setOptions({
   renderer: new marked.Renderer(),
@@ -47,6 +48,7 @@ const BlogDetail: FC<blogDetailProps> = ({
 }) => {
   return (
     <div className={styles.container}>
+      <Title title="详情" />
       <Card className={styles.wrapper}>
         <h1 className={cls(styles.title, 'hvr-wobble-bottom')}>
           {blogTitle}

@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import { useRouter } from 'next/router'
 import BlogList from '@/components/blog-list';
 import { getBlogList } from '@/utils/api';
 import styles from './index.module.scss';
 import { BlogContext } from '@/utils/context';
+import Title from '@/components/Title';
+
 
 interface ListProps {
   blogList: any[]
@@ -14,6 +15,7 @@ const List: FC<ListProps> = ({
 }) => {
   return (
     <div className={styles.wrapper}>
+      <Title title="列表" />
       <BlogContext.Provider value={{ blogList }}>
         <BlogList />
       </BlogContext.Provider>

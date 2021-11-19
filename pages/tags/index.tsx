@@ -3,6 +3,7 @@ import { Tag } from 'antd';
 import { useRouter } from 'next/router'
 import { getTagList } from "@/utils/api";
 import Iconfont from '@/components/iconfont';
+import Title from "@/components/Title";
 import styles from './index.module.scss';
 
 interface TagProps {
@@ -27,6 +28,7 @@ const Tags: FC<TagProps> = ({
 
   return (
     <div>
+      <Title title="标签" />
       <div className="flex justify-center align-center mt20">
         <Iconfont type="icon-tag" className={styles['icon-tag']} />
         <span style={{ fontSize: '25px' }}>

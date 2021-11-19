@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import {FC, useEffect} from 'react';
 import Iconfont from '@/components/iconfont';
 import { getBlogDetail } from '@/utils/api';
 import { Card, Tag } from 'antd';
@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 import cls from 'classnames';
 import marked from 'marked';
 import hljs from 'highlight.js';
-import 'highlight.js/styles/atom-one-dark-reasonable.css';
+import 'highlight.js/styles/atom-one-dark.css';
 import styles from './index.module.scss';
 import Title from "@/components/Title";
 
@@ -20,7 +20,7 @@ marked.setOptions({
   smartypants: true,
   highlight(code) {
     // console.log('hljs.highlightAuto(code).value:', hljs.highlightAuto(code).value);
-    return hljs.highlightAuto(code).value;
+    return hljs.highlightAuto(code, ['javascript']).value;
   },
 });
 
@@ -46,6 +46,13 @@ const BlogDetail: FC<blogDetailProps> = ({
     blogContent
   }
 }) => {
+
+  useEffect(() => {
+    document.querySelectorAll('pre').forEach((el) => {
+      hljs.highlightElement(el);
+    });
+  }, [])
+
   return (
     <div className={styles.container}>
       <Title title="详情" />
